@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>错误页面</title>
+    </head>
+    <body>
+        <h3>🛴错误信息</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>用户ID</th>
+                    <th>用户名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>地址</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                  {{ range . }}
+                  <tr>
+                      <td>{{.Id}}</td>
+                      <td>{{.Name}}</td>
+                      <td>{{if .Sex}} 男 {{ else }}女 {{ end }}</td>
+                      <td>{{ .Age }}</td>
+                      <td>{{.Addr}}</td>
+                  </tr>
+              {{ end }}
+            </tbody>
+        </table>
+    </body>
+</html>

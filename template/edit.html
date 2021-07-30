@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>用户属性修改</title>
+    </head>
+    <body>
+        <form action="/edit/" method="POST">
+            <label>输入新的用户名  </label><br/><input name="name" value=""/> <br/><br/>
+            <label>输入新的用户年龄</label><br/><input name="name" value=""/> <br/><br/>
+            <label>输入新的用户性别</label><br/> 
+                <input name="sex" type="radio" value="1"/> 男
+                <input name="sex" type="radio" value="0"/> 女<br/><br/>
+            <label>输入新的用户地址</label><br/><textarea name="addr" value=""></textarea><br/>
+            <input type="submit" value="确认修改" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户管理系统</title>
+    </head>
+    <body>
+        <h2>🤵用户列表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>用户ID</th>
+                    <th>用户名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>地址</th>
+                    <th>[操👌👌👌作]</th>
+                </tr>
+            </thead>
+            <tbody>
+                  {{ range . }}
+                  <tr>
+                      <td>{{.Id}}</td>
+                      <td>{{.Name}}</td>
+                      <td>{{if .Sex}} 男 {{ else }}女 {{ end }}</td>
+                      <td>{{ .Age }}</td>
+                      <td>{{.Addr}}</td>
+                      <td>    
+                          <a href="/edit/?id={{ .Id}}"><input type="submit" value="编辑" /></a>
+                          <a href="/delete/?id={{ .Id}}"><input type="submit" value="删除"/></a>
+                      </td>
+                  </tr>
+              {{ end }}
+            </tbody>
+        </table>
+        <h2>新建用户✔</h2>
+        <a href="/create/"><input type="submit" value="新建用户" /></a>
+    </body>
+</html>
